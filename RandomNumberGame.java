@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 class Game{
-    String player;
      int attempts;
      int score;
      public int game(){
@@ -79,7 +78,7 @@ public class RandomNumberGame {
         System.out.println("Score: "+score);
     }
 }
-        // ASSUMPTIONS- We have taken 5 rounds for this game and score is given based on number of rounds i.e
+// ASSUMPTIONS- We have taken 5 rounds for this game and score is given based on number of rounds i.e.
 // for each round we have given 5 points.
 
 
