@@ -43,7 +43,7 @@ public class StudentGradeCalculator {
         public void add() {
             int i = 0;
             Scanner sc = new Scanner(System.in);
-            while (i < 2) {
+            while (i < 5) {
                 System.out.println("Subject Name: ");
                 String sub = sc.next();
                 this.subjects.add(sub);
@@ -61,7 +61,7 @@ public class StudentGradeCalculator {
             return total;
         }
         public float avg(int total) {
-            return (float) total / 2;
+            return (float) total / 5;
         }
 
         public String grade(float avg) {
