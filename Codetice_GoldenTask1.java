@@ -19,49 +19,58 @@ public class ATM implements  Bank {
     public void deposit() {
         System.out.println("Enter AccountNumber: ");
         int no = sc.nextInt();
-        if (no == user.accountnumber) {
-            System.out.println("Successfully Logged In");
-            System.out.println("Welcome! "+this.user.AccounHolderName);
-            System.out.println("Current Balance: " + this.user.balance);
-            System.out.println("Enter the amount to be deposited: ");
-            float dep = sc.nextFloat();
-            this.user.balance += dep;
-            System.out.println("Current Balance: " + this.user.balance);
+        while(no!=user.accountnumber){
+            System.out.println("Wrong AccountNumber!.Try Again");
+            System.out.println("Enter AccountNumber again: ");
+            no=sc.nextInt();
         }
+        System.out.println("Successfully Logged In");
+        System.out.println("Welcome! "+this.user.AccounHolderName);
+        System.out.println("Current Balance: " + this.user.balance);
+        System.out.println("Enter the amount to be deposited: ");
+        float dep = sc.nextFloat();
+        this.user.balance += dep;
+        System.out.println("Current Balance: " + this.user.balance);
     }
     @Override
     public void withdraw() {
         System.out.println("Enter AccountNumber: ");
         int no = sc.nextInt();
-        if (no == user.accountnumber) {
-            System.out.println("Successfully Logged In");
-            System.out.println("Welcome! "+this.user.AccounHolderName);
-            System.out.println("Current Balance: " + this.user.balance);
+        while(no!=user.accountnumber){
+            System.out.println("Wrong AccountNumber!.Try Again");
+            System.out.println("Enter AccountNumber again: ");
+            no=sc.nextInt();
+        }
+        System.out.println("Successfully Logged In");
+        System.out.println("Welcome! "+this.user.AccounHolderName);
+        System.out.println("Current Balance: " + this.user.balance);
 //            System.out.println("Enter the amount to be deposited: ");
-            float with;
+        float with;
+        System.out.println("Enter the amount to be withdrawn: ");
+        with = sc.nextFloat();
+        while (with > this.user.balance) {
+            System.out.println("InSufficient Balance.Try Again!");
             System.out.println("Enter the amount to be withdrawn: ");
             with = sc.nextFloat();
-            while (with > this.user.balance) {
-                System.out.println("InSufficient Balance.Try Again!");
-                System.out.println("Enter the amount to be withdrawn: ");
-                with = sc.nextFloat();
 //                if (with > this.user.balance) {
 //                    System.out.println("InSufficient Balance.Try Again!");
 //                }
-            }
-            this.user.balance-=with;
-            System.out.println("Current Balance: " + this.user.balance);
         }
+        this.user.balance-=with;
+        System.out.println("Current Balance: " + this.user.balance);
     }
     @Override
     public void checkbalance() {
         System.out.println("Enter AccountNumber: ");
         int no = sc.nextInt();
-        if (no == user.accountnumber) {
-            System.out.println("Successfully Logged In");
-            System.out.println("Welcome! "+this.user.AccounHolderName);
-            System.out.println("Current Balance: " + this.user.balance);
+        while(no!=user.accountnumber){
+            System.out.println("Wrong AccountNumber!.Try Again");
+            System.out.println("Enter AccountNumber again: ");
+            no=sc.nextInt();
         }
+        System.out.println("Successfully Logged In");
+        System.out.println("Welcome! "+this.user.AccounHolderName);
+        System.out.println("Current Balance: " + this.user.balance);
     }
 
         public static void main (String[]args){
